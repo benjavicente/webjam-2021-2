@@ -30,7 +30,7 @@
 ## 🖼️ Images
 
 <div align="center">
-  <img src="blob:https://mega.nz/d404402f-ee7a-43fe-83f5-584d0601a538" />
+  <img src="https://mega.nz/file/L0ExAQiB#cytvx0O07Zvr9bQKqOC_zGGBDQlzw4NS1757s7zJKyI" />
 </div>
 
 ## 👪 Team
