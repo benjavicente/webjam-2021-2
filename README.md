@@ -31,6 +31,7 @@
 
 <div align="center">
   <img src="public/images/readme/image.png" />
+  <p>Home Page</p>
 </div>
 
 ## 👪 Team
