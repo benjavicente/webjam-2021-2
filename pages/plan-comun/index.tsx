@@ -19,8 +19,8 @@ function Result({ name, href, files = [] }: Item, index: number) {
         
           <div className="absolute left-6 h-full w-2 -mx-6 -my-3 rounded-l-lg" style={{backgroundColor: courseColor}}></div>
           <div>
-            <div className="font-bold text-lg font-inter">{courseName}</div>
-            <div className="font-thin tracking-wider text-xs font-inter mt-1">{courseAcronym}</div>
+            <h1 className="font-bold text-lg font-inter">{courseName}</h1>
+            <h3 className="font-thin tracking-wider text-xs font-inter mt-1">{courseAcronym}</h3>
           </div>
           <div className="font-thin tracking-wider text-xs font-inter mt-1 text-right">{files.length} archivos</div>
           </li>

@@ -9,7 +9,7 @@ export default function Index() {
   return (
     <div>
 
-      <section className="flex justify-center text-center my-20 items-center">
+      <section className="flex justify-center text-center my-20 items-center px-4">
         <div>
           <h1 className="font-extrabold font-inter mb-4 text-5xl">
             Pasa tus ramos
