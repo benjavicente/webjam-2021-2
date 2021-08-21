@@ -1,12 +1,12 @@
 <div align="center">
   <h1>🌎 CCC WebJam 21-I</h1>
 
-  <a href="https://github.com/">Project</a> ·
-  <a href="https://github.com/">Submission</a> ·
-  <a href="https://github.com/">Images</a> ·
-  <a href="https://github.com/">Team</a> ·
-  <a href="https://github.com/">Technologies</a> ·
-  <a href="https://github.com/">Comments</a>
+  <a href="https://github.com/benjavicente/webjam-2021-2#-project">Project</a> ·
+  <a href="https://github.com/benjavicente/webjam-2021-2#-submission">Submission</a> ·
+  <a href="https://github.com/benjavicente/webjam-2021-2#%EF%B8%8F-images">Images</a> ·
+  <a href="https://github.com/benjavicente/webjam-2021-2#-team">Team</a> ·
+  <a href="https://github.com/benjavicente/webjam-2021-2#%EF%B8%8F-technologies">Technologies</a> ·
+  <a href="https://github.com/benjavicente/webjam-2021-2#-comments">Comments</a>
 
   <img src="https://img.shields.io/static/v1?label=CCC&message=2021&color=yellow" />
   <img src="https://img.shields.io/static/v1?label=WebJam&message=21-I&color=blue" />
@@ -17,7 +17,7 @@
 
 ## 🎨 Project
 
-**Project Number**
+**Project 9**
 
 > Please provide a small description of your project here.
 
@@ -46,7 +46,9 @@
 ## 🏗️ Technologies
 
 * **Feature:**
-  * Technology
+  * [Next.js](https://nextjs.org/)
+  * [Tailwindcss](https://tailwindcss.com/)
+  * [Google Drive API](https://developers.google.com/drive/api/)
 
 ## 💬 Comments
 
