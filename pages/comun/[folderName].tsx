@@ -1,23 +1,30 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import { Item } from "../lib/types"
-import { folderContent } from "../lib/fetcher"
+import { Item } from "../../lib/types"
+import { folderContent } from "../../lib/fetcher"
+import Footer from "../../components/Footer";
+import NavBar from "../../components/NavBar";
 
-
-
+// elemento que contiene un resultado
+// es parecido a los componentes, pero solo
+// se puede usar en esta ruta
 function FileContainer({ name }: Item) {
     return (<li>{name}</li>)
 }
+
+
 export default function Folder({ folderData }: { folderData: Item | null }) {
     if (folderData) {
         const { name, files, href } = folderData
         return (
             <>
+                <NavBar />
                 <h1>
                     {name}
                 </h1>
                 <ul>
                     {files?.map(FileContainer)}
                 </ul>
+                <Footer />
             </>
         )
     }
