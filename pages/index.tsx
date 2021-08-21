@@ -24,7 +24,7 @@ export default function Home({ data }: { data: FileQueryResponse }) {
   console.log(data)
   return (
     <main>
-      <h1>Recopilación</h1>
+      <h1 className="text-3xl font-bold" >Recopilación</h1>
       <ul>
         {data.files.map(Result)}
       </ul>
@@ -34,8 +34,9 @@ export default function Home({ data }: { data: FileQueryResponse }) {
 
 
 async function getDriveFolderContent(itemID: string) {
-  const url = `https://www.googleapis.com/drive/v3/files?q='${itemID}'+in+parents&key=${process.env.API_KEY}`
+  const url = `https://www.googleapis.com/drive/v3/files?q='${itemID}'+in+parents&key=${process.env.API_KEY}`  
   return await (await fetch(url)).json()
+
 
   // recursive strategy to obtain folders content
   // return await Promise.all(data.map(async (file) => {
