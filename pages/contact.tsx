@@ -30,8 +30,10 @@ function FileFormInput({ children }: { children: string }) {
         }
         element.ondrop = (event: DragEvent) => {
             event.preventDefault()
-            input.files = event.dataTransfer.files
-            setFileName(input.files[0].name)
+            if (event.dataTransfer?.files) {
+                input.files = event.dataTransfer.files
+                setFileName(input.files[0].name)
+            }
         }
     })
     return (
