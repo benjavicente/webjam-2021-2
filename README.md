@@ -47,3 +47,7 @@
   * [Next.js](https://nextjs.org/) - Framework JS de React que trabaja con librerías JavaScript y TypeScript.
   * [Tailwindcss](https://tailwindcss.com/) - Framework CSS con una sintaxis más flexible.
   * [Google Drive API](https://developers.google.com/drive/api/) - API de Google Drive para acceder a carpetas compartidas.
+
+## 💬 Comments
+
+> Agradecimientos a los organizadores del evento por brindarnos la oportunidad de poner a prueba nuestros conocimientos, poder hablar con más personas y descubrir nuevas cosas.
