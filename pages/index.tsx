@@ -5,19 +5,25 @@ import { getRootFolder } from "../lib/fetcher"
 
 
 function Result({ name, href, files = [] }: Item, index: number) {
-  // let courseArr = name.split("-");
-  // let courseName = courseArr[1];
-  // let courseAcronym = courseArr[0];
-  // let courseFaculty = courseAcronym.slice(0,3);
-  // let courseCode = courseAcronym.slice(3,);
+  let courseArr = name.split("-");
+  let courseName = courseArr[1];
+  let courseAcronym = courseArr[0];
+  let courseFaculty = courseAcronym.slice(0,3);
+  let courseCode = courseAcronym.slice(3,);
 
   return (
-    <li key={index} className="shadow-xl rounded-lg px-6 py-3 relative bg-white">
-      <div className="absolute left-6 h-full w-2 bg-red-500 -mx-6 -my-3 rounded-l-lg"></div>
-      <a href={href}>{name}</a>
-      {files ? <Link href={`./${name}`}><a>Ir a sus archivos</a></Link> : null}
-      {/* <div className="font-bold text-lg font-inter">{courseName}</div>
-      <div className="font-thin tracking-wider text-xs font-inter mt-1">{courseAcronym}</div> */}
+    <li key={index} className="shadow-xl rounded-lg px-6 py-3 relative bg-white cursor-pointer">
+      {/* <a href={href}>{name}</a> */}
+      {files ? <Link href={`./${name}`}>
+        
+      <div className="">
+        <div className="absolute left-6 h-full w-2 bg-red-500 -mx-6 -my-3 rounded-l-lg"></div>
+        <div className="font-bold text-lg font-inter">{courseName}</div>
+        <div className="font-thin tracking-wider text-xs font-inter mt-1">{courseAcronym}</div>
+      </div>
+
+
+      </Link> : null}
       
     </li>
   )
