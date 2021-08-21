@@ -16,7 +16,7 @@ function Result({ name, href, files = [] }: Item, index: number) {
 export default function Home({ rootFolder }: { rootFolder: Item[] }) {
   return (
     <main>
-      <h1 className="text-5xl">Recopilación</h1>
+      <h1 className="text-3xl font-bold" >Recopilación</h1>
       <ul>
         {rootFolder.map(Result)}
       </ul>
