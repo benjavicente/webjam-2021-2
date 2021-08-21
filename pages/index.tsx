@@ -1,59 +1,34 @@
-type FileQueryObject = {
-  kind: string
-  id: string
-  name: string
-  mimeType: string
-}
+import { GetStaticProps } from "next";
+import { Item } from "../lib/types"
+import { getRootFolder } from "../lib/fetcher"
 
-type FileQueryResponse = {
-  kind: string
-  incompleteSearch: boolean
-  files: FileQueryObject[]
-}
-
-
-function Result({ name }: FileQueryObject, index: number) {
+// Estos son los elementos
+function Result({ name, href, files = [] }: Item, index: number) {
   return (
     <li key={index}>
-      {name}
+      <a href={href}>{name}</a>
+      {files ? <ul> {files.map(Result)} </ul> : null}
     </li>
   )
 }
 
-export default function Home({ data }: { data: FileQueryResponse }) {
-  console.log(data)
+export default function Home({ rootFolder }: { rootFolder: Item[] }) {
   return (
     <main>
       <h1 className="text-5xl">Recopilación</h1>
       <ul>
-        {data.files.map(Result)}
+        {rootFolder.map(Result)}
       </ul>
     </main>
   )
 }
 
-
-async function getDriveFolderContent(itemID: string) {
-  const url = `https://www.googleapis.com/drive/v3/files?q='${itemID}'+in+parents&key=${process.env.API_KEY}`
-  return await (await fetch(url)).json()
-
-  // recursive strategy to obtain folders content
-  // return await Promise.all(data.map(async (file) => {
-  //   if (file.mimeType === "application/vnd.google-apps.folder") {
-  //     const files = await getDriveFolderContent(file.id)
-  //     return {type: "folder", files, name: file.name}
-  //   }
-  //   return {type: "file", name: file.name}
-  // }))
-}
-
-
-export async function getStaticProps() {
-  const folderId = "1h0CCp6sz-PBmtun9yDDsPLrfvpOUlCBB"
-  const data  = await getDriveFolderContent(folderId)
+// Abajo está el código que corre en el servidor
+export const getStaticProps: GetStaticProps = async () => {
+  const rootFolder = await getRootFolder()
   return {
     props: {
-      data
+      rootFolder
     }
   }
 }
