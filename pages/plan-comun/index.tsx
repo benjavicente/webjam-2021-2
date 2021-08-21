@@ -15,7 +15,7 @@ function Result({ name, href, files = [] }: Item, index: number) {
     <div className='flex'>
         {/* <a href={href}>{name}</a> */}
         {files ? <Link href={`./plan-comun/${name}`}>
-          <li key={index} className="shadow-xl rounded-lg px-6 py-3 relative bg-white cursor-pointer flex-1 flex flex-col justify-between">
+          <li className="shadow-xl rounded-lg px-6 py-3 relative bg-white cursor-pointer flex-1 flex flex-col justify-between">
         
           <div className="absolute left-6 h-full w-2 -mx-6 -my-3 rounded-l-lg" style={{backgroundColor: courseColor}}></div>
           <div>
