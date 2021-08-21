@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <h1>🌎 CCC WebJam 21-I</h1>
 
-## Getting Started
+  <a href="https://github.com/">Project</a> ·
+  <a href="https://github.com/">Submission</a> ·
+  <a href="https://github.com/">Images</a> ·
+  <a href="https://github.com/">Team</a> ·
+  <a href="https://github.com/">Technologies</a> ·
+  <a href="https://github.com/">Comments</a>
 
-First, run the development server:
+  <img src="https://img.shields.io/static/v1?label=CCC&message=2021&color=yellow" />
+  <img src="https://img.shields.io/static/v1?label=WebJam&message=21-I&color=blue" />
+  <img src="https://img.shields.io/static/v1?label=Theme&message=Information&color=green" />
+  <img src="https://img.shields.io/static/v1?label=Time&message=24h&color=orange" />
+</div>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Project
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**Project Number**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+> Please provide a small description of your project here.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🎒 Submission
 
-## Learn More
+* [ ] [Website URL](https://www.ensaying.tk/)
+* [ ] [Source Code URL](https://github.com/benjavicente/webjam-2021-2.git)
 
-To learn more about Next.js, take a look at the following resources:
+## 🖼️ Images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<div align="center">
+  <img src="https://via.placeholder.com/150" />
+  <img src="https://via.placeholder.com/150" />
+  <img src="https://via.placeholder.com/150" />
+  <img src="https://via.placeholder.com/150" />
+</div>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 👪 Team
 
-## Deploy on Vercel
+||Name|University|Username|Feature
+|-|-|-|-|-
+|#1|Diego Valenzuela|Pontificia Universidad Católica de Chile|[@ideadiego](https://github.com/ideadiego)|Feature
+|#2|Benjamín Vicente|Pontificia Universidad Católica de Chile|[@benjavicente](https://github.com/benjavicente)|Feature
+|#3|María Ramírez|Universidad Técnica Federico Santa María|[@dima-RE](https://github.com/dima-RE)|Feature
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Technologies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* **Feature:**
+  * Technology
+
+## 💬 Comments
+
+> Please provide additional comments of your project here.
