@@ -19,7 +19,8 @@
 
 **Project 9**
 
-> Please provide a small description of your project here.
+> Repositorio con pruebas y ejercicios de años anteriores dentro del plan común de la Ingeniería, así como programación.
+> Los alumnos pueden ejercitar utilizando el material en esta plataforma de aspecto amigable.
 
 ## 🎒 Submission
 
@@ -29,10 +30,7 @@
 ## 🖼️ Images
 
 <div align="center">
-  <img src="https://via.placeholder.com/150" />
-  <img src="https://via.placeholder.com/150" />
-  <img src="https://via.placeholder.com/150" />
-  <img src="https://via.placeholder.com/150" />
+  <img src="https://drive.google.com/file/d/1gaRTrL59d3pBUSJlx-fPLdUshARJ4PgO/view?usp=sharing" />
 </div>
 
 ## 👪 Team
@@ -46,9 +44,9 @@
 ## 🏗️ Technologies
 
 * **Feature:**
-  * [Next.js](https://nextjs.org/)
-  * [Tailwindcss](https://tailwindcss.com/)
-  * [Google Drive API](https://developers.google.com/drive/api/)
+  * [Next.js](https://nextjs.org/) - Framework JS de React que trabaja con librerías JavaScript y TypeScript.
+  * [Tailwindcss](https://tailwindcss.com/) - Framework CSS con una sintaxis más flexible.
+  * [Google Drive API](https://developers.google.com/drive/api/) - API de Google Drive para acceder a carpetas compartidas.
 
 ## 💬 Comments
 
