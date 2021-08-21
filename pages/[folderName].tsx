@@ -3,13 +3,22 @@ import { Item } from "../lib/types"
 import { folderContent } from "../lib/fetcher"
 
 
+
+function FileContainer({ name }: Item) {
+    return (<li>{name}</li>)
+}
 export default function Folder({ folderData }: { folderData: Item | null }) {
     if (folderData) {
         const { name, files, href } = folderData
         return (
-            <h1>
-                {name}
-            </h1>
+            <>
+                <h1>
+                    {name}
+                </h1>
+                <ul>
+                    {files?.map(FileContainer)}
+                </ul>
+            </>
         )
     }
     return (<h1>404</h1>)

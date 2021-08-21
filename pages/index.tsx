@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { GetStaticProps } from "next";
 import { Item } from "../lib/types"
 import { getRootFolder } from "../lib/fetcher"
@@ -7,7 +8,7 @@ function Result({ name, href, files = [] }: Item, index: number) {
   return (
     <li key={index}>
       <a href={href}>{name}</a>
-      {files ? <ul> {files.map(Result)} </ul> : null}
+      {files ? <Link href={`./${name}`}><a>Ir a sus archivos</a></Link> : null}
     </li>
   )
 }
