@@ -3,4 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
 
+body {
+    @apply bg-gray-200;
+}
+
+#__next {
+    @apply flex flex-col min-h-screen;
+}
+
 @tailwind utilities;
