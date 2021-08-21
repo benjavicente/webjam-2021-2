@@ -1,14 +1,18 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import { Item } from "../../lib/types"
 import { folderContent } from "../../lib/fetcher"
-import Footer from "../../components/Footer";
-import NavBar from "../../components/NavBar";
+
 
 // elemento que contiene un resultado
 // es parecido a los componentes, pero solo
 // se puede usar en esta ruta
-function FileContainer({ name }: Item) {
-    return (<li>{name}</li>)
+function FileContainer({ name, href }: Item) {
+    return (
+    <div>
+        <li className="text-red-500">{name}</li>
+        <li className="text-blue-500">{href}</li>
+    </div>
+    )
 }
 
 
@@ -17,14 +21,12 @@ export default function Folder({ folderData }: { folderData: Item | null }) {
         const { name, files, href } = folderData
         return (
             <>
-                <NavBar />
-                <h1>
+                <h1 className="text-blue-500">
                     {name}
                 </h1>
-                <ul>
+                <ul >
                     {files?.map(FileContainer)}
                 </ul>
-                <Footer />
             </>
         )
     }
