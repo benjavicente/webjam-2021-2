@@ -12,9 +12,9 @@ type FileQueryResponse = {
 }
 
 
-function Result({ name }: FileQueryObject) {
+function Result({ name }: FileQueryObject, index: number) {
   return (
-    <li>
+    <li key={index}>
       {name}
     </li>
   )
@@ -24,7 +24,7 @@ export default function Home({ data }: { data: FileQueryResponse }) {
   console.log(data)
   return (
     <main>
-      <h1>Recopilación</h1>
+      <h1 className="text-5xl">Recopilación</h1>
       <ul>
         {data.files.map(Result)}
       </ul>
@@ -48,10 +48,9 @@ async function getDriveFolderContent(itemID: string) {
 }
 
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const folderId = "1h0CCp6sz-PBmtun9yDDsPLrfvpOUlCBB"
   const data  = await getDriveFolderContent(folderId)
-  console.log(data)
   return {
     props: {
       data
