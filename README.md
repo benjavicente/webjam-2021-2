@@ -21,6 +21,10 @@
 > Repositorio con pruebas y ejercicios de años anteriores dentro del plan común de la Ingeniería, así como programación.
 > Los alumnos pueden ejercitar utilizando el material en esta plataforma de aspecto amigable.
 
+Teníamos una feature del proyecto terminada pero errores de typescript no dejaron hacer el build. Feature de las 20:10 es la misma que de las 7, si se desea se puede correr el commit de antes de las 19:00 
+
+https://webjam-2021-2-d510l3qun-benjavicente.vercel.app/
+
 ## 🎒 Submission
 
 * [ ] [Website URL](https://www.ensaying.tk/)
