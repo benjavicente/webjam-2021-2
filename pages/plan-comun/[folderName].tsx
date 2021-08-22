@@ -1,11 +1,12 @@
+// @ts-ignore: Object is possibly 'null'.
 import { GetStaticProps, GetStaticPaths } from "next";
-import { Item } from "../../lib/types"
+import { Tarj, Item } from "../../lib/types"
 import { folderContent } from "../../lib/fetcher"
 import Link from "next/link";
 import { colors } from "../../lib/helpers"
 import useCollapse from 'react-collapsed';
 
-function Tarjeta({name, files}: {name: string, files: []}) {
+function Tarjeta({name, files}: Tarj) {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
   return (
@@ -30,7 +31,7 @@ function FileContainer({ name, href }: Item) {
 
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
     return (
-        <a className="bg-white block w-full px-6 py-3 rounded-lg shadow-lg mx-auto my-4 hover:underline" href={href} target="_blank" >
+        <a className="bg-white block w-full px-6 py-3 rounded-lg shadow-lg mx-auto my-4 hover:underline" href={href} target="_blank" rel="noreferrer">
         <li className="flex items-center justify-between">
             <h4 className="flex-grow">{fileName}</h4>
             <img src="/images/pdf.png" alt="pdf icon" />
@@ -39,6 +40,7 @@ function FileContainer({ name, href }: Item) {
     )
 }
 
+type ProcessedFiles = {[name: string]: Item[]}
 
 export default function Folder({ folderData }: { folderData: Item | null }) {
     if (folderData) {
@@ -48,20 +50,22 @@ export default function Folder({ folderData }: { folderData: Item | null }) {
         let courseAcronym = courseArr[0];
         let courseFaculty = courseAcronym.slice(0,3);
         let courseColor = colors[courseFaculty];
+        let processedFiles: ProcessedFiles = {}
 
-        let processedFiles = {}
-        for (const file of files) {
+        let filees: Item[] = files || [];
+        
+        for (const file of filees) {
             let fileArr = file.name.split("#");
             let fileI = fileArr[0];
             let fileName = fileArr[1];
             processedFiles[fileI] = processedFiles[fileI] || []
             processedFiles[fileI].push(file) 
         }
-        // console.log(processedFiles)
+        console.log(processedFiles)
         // Object.fromEntries(Object.entries(processedFiles).sort());
 
-        let tarjetas = []
-        
+        let tarjetas: Tarj[] = []
+
         for (var [key, value] of Object.entries(processedFiles)) {
             tarjetas.push({name: key, files: value})
         }
@@ -81,9 +85,7 @@ export default function Folder({ folderData }: { folderData: Item | null }) {
             </div>
                 <section >
                     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-6">
-                        {/* {console.log(files)} */}
-                        {/* {files?.map(FileContainer)} */}
-                        {tarjetas?.map(Tarjeta)}
+                        {tarjetas.map(Tarjeta)}
                     </ul>
                 </section>
             </section>

@@ -9,3 +9,7 @@ export type FileQueryResponse = {
 export type Item = {
     type: string, name: string, files?: Item[], id: string, href: string
 }
+
+export type Tarj = {
+    name: string, files: Item[]
+}
